@@ -4,6 +4,7 @@ import { Header } from "../components/Header";
 import styled from "styled-components";
 import Hero from "@/components/Hero";
 import { SideWidget } from "@/components/SideElement";
+import AboutMe from "@/components/AboutMe";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <SideWidget orientation="right" />
       <MainContainer>
         <Hero />
+        <AboutMe />
       </MainContainer>
       {/* <div className="text-white">Footer</div> */}
     </div>
