@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import Image from 'next/image'
+import { SectionHeader } from "./SectionHeader";
 
 export const AboutMe = () => {
   return (
     <Section>
-      <Header>About Me</Header>
+      <SectionHeader count={1} >About Me</SectionHeader>
       <Wrapper>
         <AboutDescription>
           <p>Hey! I’m Syed Tajudheen, a software engineer who loves building intuitive, performant, and scalable web applications. My expertise lies in crafting seamless frontend experiences with React.js, but I also enjoy architecting scalable backend solutions when needed.</p>
-          <p>Fast-forward to today, and I’ve had the privilege of working on enterprise applications, <a href="https://www.sc.com/en/">fintech platforms</a>, <a href="https://www.adappt.co.uk/">startups</a>, and internal tooling. My main focus these days is developing scalable, high-performance web applications using React, Redux, and GraphQL, while also contributing to Micro Frontend architecture, UI component libraries, and monorepo-based projects.</p>
+          <p>Fast-forward to today, and I’ve had the privilege of working on <a href="https://s2b.standardchartered.com/" target="_blank">enterprise applications</a>, <a href="https://s2b.standardchartered.com/" target="_blank">fintech platforms</a>, <a href="https://www.adappt.co.uk/" target="_blank">startups</a>, and internal tooling. My main focus these days is developing scalable, high-performance web applications using React, Redux, and GraphQL, while also contributing to Micro Frontend architecture, UI component libraries, and monorepo-based projects.</p>
           <p>Here are a few technologies I’ve been working with recently:</p>
           <SkilslList>
             <li>JavaScript (ES6+)</li>
@@ -36,6 +37,7 @@ export const AboutMe = () => {
 export default AboutMe;
 
 const Section = styled.section`
+  padding: 0 0 100px 0;
 `;
 
 const ImageWrapper = styled.div`
@@ -77,7 +79,7 @@ const AboutDescription = styled.div`
     color: var(--slate);
 
     a {
-      color: varr(--green);
+      color: var(--green);
       text-decoration: none;
     }
     a:hover {
@@ -118,34 +120,5 @@ const Wrapper = styled.div`
       width: 100%;
       margin-top: 16px;
     }
-  }
-`;
-
-const Header = styled.h2`
-  font-size: var(--fz-heading);
-  font-weight: 600;
-  font-family: var(--font-sans);
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  
-  &::before {
-    position: relative;
-    bottom: 4px;
-    content: "01.";
-    margin-right: 10px;
-    color: var(--green);
-    font-family: var(--font-mono);
-    font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
-    font-weight: 400;
-  }
-  &::after {
-    content: "";
-    display: block;
-    width: 200px;
-    height: 1px;
-    background-color: var(--lightest-navy);
-    margin-left: 10px;
-    margin-top: 4px;
   }
 `;

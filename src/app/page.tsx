@@ -5,6 +5,8 @@ import styled from "styled-components";
 import Hero from "@/components/Hero";
 import { SideWidget } from "@/components/SideElement";
 import AboutMe from "@/components/AboutMe";
+import { Work } from "@/components/Work";
+import { Experience } from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <MainContainer>
         <Hero />
         <AboutMe />
+        <Experience />
+        <Work />
       </MainContainer>
       {/* <div className="text-white">Footer</div> */}
     </div>

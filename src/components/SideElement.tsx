@@ -20,10 +20,10 @@ export const SideWidget = ({ orientation }: SideWidgetProps) => {
   return (
     <SideElement orientation="left">
       <ListWrapper as="ul">
-        <li><Link as="a"><FiGithub size={20} color="var(--light-slate)" /></Link></li>
-        <li><Link as="a"><FaInstagram size={20} color="var(--light-slate)" /></Link></li>
-        <li><Link as="a"><FaXTwitter size={20} color="var(--light-slate)" /></Link></li>
-        <li><Link as="a"><FiLinkedin size={20} color="var(--light-slate)" /></Link></li>
+        <li><Link href="https://github.com/syedtajudheen" target="_blank" as="a"><FiGithub size={20} color="var(--light-slate)" /></Link></li>
+        <li><Link href="https://www.instagram.com/syedtajudheen/" target="_blank" as="a"><FaInstagram size={20} color="var(--light-slate)" /></Link></li>
+        <li><Link href="https://x.com/syedtajudheen" target="_blank" as="a"><FaXTwitter size={20} color="var(--light-slate)" /></Link></li>
+        <li><Link href="https://www.linkedin.com/in/syed-tajudheen/" target="_blank" as="a"><FiLinkedin size={20} color="var(--light-slate)" /></Link></li>
       </ListWrapper>
     </SideElement>
   )
