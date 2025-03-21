@@ -44,7 +44,7 @@ export const Experience = () => {
     return data.find((item) => item.id === selectedTab);
   }, [selectedTab]);
 
-  const handleTabClick = (id) => {
+  const handleTabClick = (id: number) => {
     setSelectedTab(id);
   };
 
@@ -148,7 +148,7 @@ const Button = styled.button<{ isActive: boolean }>`
   text-align: left;
   white-space: nowrap;
   cursor: pointer;
-  
+
   &:hover {
     background-color: var(--light-navy);
   }
