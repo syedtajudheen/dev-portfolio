@@ -1,12 +1,27 @@
 "use client";
+// import { style } from "framer-motion/client";
 import { Header } from "../components/Header";
+import styled from "styled-components";
+import Hero from "@/components/Hero";
+import { SideWidget } from "@/components/SideElement";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[100px_1fr_20px] items-center justify-items-center min-h-screen gap-16  ">
+    <div className="grid grid-rows-[100px_1fr_20px]  min-h-screen gap-16">
       <Header />
-      <div className="text-white">Body</div>
-      <div className="text-white">Footer</div>
+      <SideWidget orientation="left" />
+      <SideWidget orientation="right" />
+      <MainContainer>
+        <Hero />
+      </MainContainer>
+      {/* <div className="text-white">Footer</div> */}
     </div>
   );
 }
+
+const MainContainer = styled.main`
+  padding: 0px 150px;
+  @media (max-width: 1080px) {
+    padding: 0px 100px;
+  }
+`;
