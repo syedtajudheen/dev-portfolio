@@ -26,11 +26,11 @@ export const AboutMe = ({ ref }: AboutMeProps) => {
           </SkilslList>
         </AboutDescription>
 
-        <ImageWrapper className="">
+        <ImageWrapper>
           <Image
             src="/profile2.webp"
-            width={500}
-            height={500}
+            width={300}
+            height={300}
             alt="My Image"
           />
         </ImageWrapper>
@@ -50,6 +50,8 @@ const Section = styled.section`
 `;
 
 const ImageWrapper = styled.div`
+  max-width: 300px;
+
   img {
     /* filter: sepia(0.5) hue-rotate(130deg) saturate(0.5); */
     transition: 0.3s ease-in-out;
@@ -62,9 +64,9 @@ const ImageWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-        margin: 50px auto 0px;
-        width: 70%;
-}
+    margin: 50px auto 0px;
+    width: 70%;
+  }
 `;
 
 const SkilslList = styled.ul`
@@ -105,11 +107,13 @@ const AboutDescription = styled.div`
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 32px;
-  @media (max-width: 1080px) {
+  grid-template-columns: 3fr 2fr;
+  gap: 50px;
+  
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
+
   & > div:first-child {
     p {
       font-size: var(--fz-lg);
@@ -123,16 +127,5 @@ const Wrapper = styled.div`
   }
   & > div:last-child {
     width: 100%;
-
-    @media (max-width: 1080px) {
-      margin-top: 32px;
-      width: 100%;
-      height: 300px;
-    }
-    @media (max-width: 600px) {
-      height: 200px;
-      width: 70%;
-      margin-top: 16px;
-    }
   }
 `;

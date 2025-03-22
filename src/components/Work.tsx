@@ -9,7 +9,7 @@ const projects = [
     description: "The Straight2Bank Lending and Quick Invoice modules simplify loan management and invoicing. Lending enables easy loan applications and tracking, while Quick Invoice streamlines invoice creation and payment management, both ensuring seamless integration and real-time updates.",
     link: "https://s2b.standardchartered.com/",
     isFeatured: true,
-    skills: ["React", "Redux", "Micro-frontend", "Styled Components", "Node.js"]
+    skills: ["React", "Redux", "Micro-frontend", "Styled-components", "Node.js"]
   },
   {
     title: "LexisCreate",
@@ -23,7 +23,7 @@ const projects = [
     description: "At the Robert Koch Institute, I contributed to a knowledge-sharing platform that enables German institutions and international partners in health protection to collaborate, exchange information on events and projects, and strengthen response capabilities for public health emergencies.",
     link: "https://www.rki.de/EN/Home/homepage_node.html",
     isFeatured: false,
-    skills: ["React", "Next.js", "Redux", "Next.js", "TailwindCSS", "Node.js"]
+    skills: ["React", "Next.js", "Redux", "TailwindCSS", "Node.js"]
   },
   {
     title: "WHO - World Malaria Toolkit",
@@ -73,6 +73,14 @@ export const Work = ({ ref }: WorkProps) => {
           <ExternalLink size={20} color="white" />
         </div>
         <p>{project.description}</p>
+
+        <footer>
+          <Skills>
+            {project.skills.map((skill, index) => (
+              <li key={index}>{skill}{"  "}</li>
+            ))}
+          </Skills>
+        </footer>
       </Project>
     ));
   };
@@ -88,11 +96,32 @@ export const Work = ({ ref }: WorkProps) => {
   )
 };
 
+const Skills = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: var(--fz-xxs);
+  line-height: 1.75;
+  color: var(--slate);
+  margin: 15px 0;
+  li {
+    margin-right: 15px;
+  }
+`;
+
 const Section = styled.section`
   padding: 80px 150px;
 
   @media(max-width: 768px) {
     padding: 0 24px 100px 24px;
+  }
+
+  @media(max-width: 1080px) {
+    padding: 0 8px 100px 8px;
+  }
+
+  @media(min-width: 1080px) {
+    padding: 0;
   }
 `;
 
@@ -143,8 +172,8 @@ const Project = styled.div`
   position: relative;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  height: 300px;
+  justify-content: space-around;
+  /* height: 300px; */
   width: 100%;
   box-shadow: 0 10px 30px -15px var(--navy-shadow);
   transition: var(--transition);
@@ -155,4 +184,4 @@ const Project = styled.div`
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
-`
+`;

@@ -40,6 +40,7 @@ const HeaderWrapper = styled.header`
 `;
 
 const NavMenu = styled.nav`
+  display: flex;
   @media(max-width: 770px) {
     display: none;
   }
@@ -81,7 +82,7 @@ const Menu = styled.li`
 
 const Button = styled.button`
   padding: 0.5rem;
-  margin-left: 24px;
+  margin: 0 24px;
   border: 1px solid var(--green);
   border-radius: var(--border-radius);
   padding: 8px 16px;
