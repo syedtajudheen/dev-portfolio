@@ -120,11 +120,19 @@ const GridWrapper = styled.div`
 `;
 
 const Section = styled.section`
-  padding: 100px 0;
+  padding: 120px 0;
 
   a {
     color: var(--green);
     text-decoration: none;
+  }
+
+  @media(min-width: 1080px) {
+    padding: 0 0 100px 0;
+  }
+
+  @media(max-width: 1080px) {
+    padding: 0 24px 100px 24px;
   }
 
   @media(max-width: 768px) {

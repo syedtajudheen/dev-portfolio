@@ -42,7 +42,11 @@ export const AboutMe = ({ ref }: AboutMeProps) => {
 export default AboutMe;
 
 const Section = styled.section`
-  padding: 0 0 100px 0;
+  padding: 0 0 120px 0;
+
+  @media(max-width: 1080px) {
+    padding: 0 24px 100px 24px;
+  }
 
   @media(max-width: 768px) {
     padding: 0 24px 100px 24px;

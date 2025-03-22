@@ -112,16 +112,17 @@ const Skills = styled.ul`
 const Section = styled.section`
   padding: 80px 150px;
 
-  @media(max-width: 768px) {
-    padding: 0 24px 100px 24px;
-  }
-
-  @media(max-width: 1080px) {
-    padding: 0 8px 100px 8px;
-  }
 
   @media(min-width: 1080px) {
     padding: 0;
+  }
+
+  @media(max-width: 1080px) {
+    padding: 0 24px 100px 24px;
+  }
+
+  @media(max-width: 768px) {
+    padding: 0 24px 100px 24px;
   }
 `;
 

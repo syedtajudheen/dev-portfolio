@@ -29,7 +29,6 @@ const HeroSection = styled.section`
   height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
-  padding: 0 24px;
 
   h1 {
     margin: 20px 0px 30px 4px;
@@ -54,5 +53,17 @@ const HeroSection = styled.section`
     font-family: var(--font-sans);
     font-weight: 600;
     line-height: 0.9;
+  }
+
+  @media(min-width: 1080px) {
+    padding: 0;
+  }
+
+  @media(max-width: 1080px) {
+    padding: 0 24px 100px 24px;
+  }
+
+  @media(max-width: 768px) {
+    padding: 0 24px 100px 24px;
   }
 `;
