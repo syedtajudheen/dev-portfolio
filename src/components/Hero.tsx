@@ -5,7 +5,7 @@ const Hero = () => {
     <HeroSection>
       <h1>Hi, my name is</h1>
       <h2>Syed Tajudheen.</h2>
-      <h3>I build things for the web.</h3>
+      <h3>I build things for the web and mobile.</h3>
 
       <Description>
         I’m a software engineer crafting accessible, human-centered digital experiences. I specialize in building seamless, high-performing web and mobile applications where design meets innovation.
