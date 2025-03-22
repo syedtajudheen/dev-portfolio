@@ -126,6 +126,10 @@ const Section = styled.section`
     color: var(--green);
     text-decoration: none;
   }
+
+  @media(max-width: 768px) {
+    padding: 0 24px 100px 24px;
+  }
 `;
 
 const TabList = styled.div`

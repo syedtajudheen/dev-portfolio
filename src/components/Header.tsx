@@ -1,3 +1,4 @@
+import { BiMenuAltRight } from "react-icons/bi";
 import styled from "styled-components";
 
 type HeaderProps = {
@@ -9,17 +10,46 @@ export const Header = ({ onClickMenu }: HeaderProps) => {
     window.open("/Syed_Developer.docx", "_blank");
   };
   return (
-    <div className="w-full flex flex-row justify-end items-center text-[13px] font-[family-name:var(--font-mono)] px-12">
-      <MenuList className="flex flex-row gap-4">
-        <Menu onClick={() => onClickMenu("about")}>About</Menu>
-        <Menu onClick={() => onClickMenu("experience")}>Experience</Menu>
-        <Menu onClick={() => onClickMenu("work")}>Work</Menu>
-        <Menu onClick={() => onClickMenu("contact")}>Contact</Menu>
-      </MenuList>
-      <Button onClick={handleResumeClick}>Resume</Button>
-    </div>
+    <HeaderWrapper>
+      <NavMenu>
+        <MenuList className="flex flex-row gap-4">
+          <Menu onClick={() => onClickMenu("about")}>About</Menu>
+          <Menu onClick={() => onClickMenu("experience")}>Experience</Menu>
+          <Menu onClick={() => onClickMenu("work")}>Work</Menu>
+          <Menu onClick={() => onClickMenu("contact")}>Contact</Menu>
+        </MenuList>
+        <Button onClick={handleResumeClick}>Resume</Button>
+      </NavMenu>
+
+      <DrawerMenu>
+        <BiMenuAltRight size={48} color={"var(--green)"} onClick={() => onClickMenu("drawer")}/>
+      </DrawerMenu>
+    </HeaderWrapper>
   );
 };
+
+const HeaderWrapper = styled.header`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: var(--fz-xs);
+  font-family: var(--font-mono);
+  padding: 0 12px;
+`;
+
+const NavMenu = styled.nav`
+  @media(max-width: 770px) {
+    display: none;
+  }
+`;
+
+const DrawerMenu = styled.div`
+  @media(min-width: 770px) {
+    display: none;
+  }
+`;
 
 const MenuList = styled.ol`
   display: flex;
@@ -27,13 +57,17 @@ const MenuList = styled.ol`
   color: inherit;
   counter-reset: item;
   list-style: none;
-
+  /* display: none; */
   /* Apply counter to list items */
   & li::before {
     counter-increment: item;
     content: "0"counter(item) ". "; /* Adds dynamic numbering */
     font-weight: bold;
     color: var(--green);
+  }
+
+  @media screen {
+    
   }
 `;
 

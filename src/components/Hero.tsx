@@ -29,8 +29,9 @@ const HeroSection = styled.section`
   height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
+  padding: 0 24px;
 
-   h1 {
+  h1 {
     margin: 20px 0px 30px 4px;
     color: var(--green);
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));

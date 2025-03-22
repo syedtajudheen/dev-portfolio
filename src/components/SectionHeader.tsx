@@ -13,13 +13,14 @@ export const SectionHeader = ({ count, children }: SectionHeaderProps) => {
 
 
 const Header = styled.h2<{ count: number }>`
-  font-size: var(--fz-heading);
   font-weight: 600;
   font-family: var(--font-sans);
   margin-bottom: 16px;
   display: flex;
   align-items: center;
-  
+  font-size: clamp(26px, 5vw, var(--fz-heading));
+  white-space: nowrap;
+
   &::before {
     position: relative;
     bottom: 4px;
@@ -37,6 +38,11 @@ const Header = styled.h2<{ count: number }>`
     height: 1px;
     background-color: var(--lightest-navy);
     margin-left: 10px;
-    margin-top: 4px;
+    margin-top: -6px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
+  
 `;

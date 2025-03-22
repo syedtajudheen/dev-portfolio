@@ -26,10 +26,11 @@ const Section = styled.section`
   margin: 0px auto 100px;
   text-align: center;
   gap: 16px;
-  @media (max-width: 600px) {
-    padding: 80px 50px;
+
+  @media(max-width: 768px) {
+    padding: 0 24px 100px 24px;
   }
-  @media (max-width: 1080px) {
+  @media (min-width: 1080px) {
     padding: 80px 100px;
   }
   p {
@@ -38,7 +39,7 @@ const Section = styled.section`
     color: var(--lightest-slate);
     font-family: var(--font-sans);
     margin-bottom: 16px;
-    @media (max-width: 600px) {
+    @media (max-width: 786px) {
       font-size: 18px;
     }
     @media (max-width: 400px) {
@@ -66,8 +67,9 @@ const Section = styled.section`
     }
   }
 `;
+
 const Title = styled.h4`
-  font-size: 60px;
+  font-size: clamp(36px, 5vw, 60px);
   font-weight: 600;
   color: var(--lightest-slate);
   font-family: var(--font-sans);

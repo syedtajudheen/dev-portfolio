@@ -90,6 +90,10 @@ export const Work = ({ ref }: WorkProps) => {
 
 const Section = styled.section`
   padding: 80px 150px;
+
+  @media(max-width: 768px) {
+    padding: 0 24px 100px 24px;
+  }
 `;
 
 const GridWrapper = styled.div`
@@ -98,6 +102,10 @@ const GridWrapper = styled.div`
   grid-template-rows: auto;
   gap: 20px;
   font-family: var(--font-sans);
+
+  @media(max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const FeaturedText = styled.label`
@@ -140,7 +148,7 @@ const Project = styled.div`
   width: 100%;
   box-shadow: 0 10px 30px -15px var(--navy-shadow);
   transition: var(--transition);
-  overflow: auto;
+  overflow: hidden;
   cursor: pointer;
 
   &:hover {

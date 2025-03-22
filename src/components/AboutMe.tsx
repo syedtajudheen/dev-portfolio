@@ -43,6 +43,10 @@ export default AboutMe;
 
 const Section = styled.section`
   padding: 0 0 100px 0;
+
+  @media(max-width: 768px) {
+    padding: 0 24px 100px 24px;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -56,6 +60,11 @@ const ImageWrapper = styled.div`
     filter: none;
     transition: 0.3s ease-in-out;
   }
+
+  @media (max-width: 768px) {
+        margin: 50px auto 0px;
+        width: 70%;
+}
 `;
 
 const SkilslList = styled.ul`
@@ -122,7 +131,7 @@ const Wrapper = styled.div`
     }
     @media (max-width: 600px) {
       height: 200px;
-      width: 100%;
+      width: 70%;
       margin-top: 16px;
     }
   }

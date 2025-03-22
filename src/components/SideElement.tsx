@@ -49,6 +49,10 @@ const SideElement = styled.div<SideWidgetProps>`
     margin: 0px auto;
     background-color: var(--light-slate);
   }
+
+  @media(max-width: 770px) {
+    display: none;
+  }
 `;
 
 const ListWrapper = styled.ul`
