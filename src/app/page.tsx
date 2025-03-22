@@ -65,11 +65,12 @@ export default function Home() {
 
 const MainContainer = styled.main`
   padding: 0px 150px;
-  @media (max-width: 768px) {
-    padding: 0;
-  }
 
   @media (max-width: 1080px) {
     padding: 0px 80px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
   }
 `;

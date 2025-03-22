@@ -41,13 +41,13 @@ const HeaderWrapper = styled.header`
 
 const NavMenu = styled.nav`
   display: flex;
-  @media(max-width: 770px) {
+  @media(max-width: 768px) {
     display: none;
   }
 `;
 
 const DrawerMenu = styled.div`
-  @media(min-width: 770px) {
+  @media(min-width: 768px) {
     display: none;
   }
 `;
