@@ -1,10 +1,15 @@
 import styled from "styled-components";
 import Image from 'next/image'
 import { SectionHeader } from "./SectionHeader";
+import { SectionRefs } from "@/app/page";
 
-export const AboutMe = () => {
+type AboutMeProps = {
+  ref: React.RefObject<SectionRefs>;
+};
+
+export const AboutMe = ({ ref }: AboutMeProps) => {
   return (
-    <Section>
+    <Section ref={(el) => { ref.current["about"] = el as HTMLDivElement; }}>
       <SectionHeader count={1} >About Me</SectionHeader>
       <Wrapper>
         <AboutDescription>

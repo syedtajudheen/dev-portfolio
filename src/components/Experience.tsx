@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import styled from "styled-components";
 import { SectionHeader } from "./SectionHeader";
+import { SectionRefs } from "@/app/page";
 
 const data = [
   {
@@ -37,7 +38,11 @@ const data = [
   }
 ];
 
-export const Experience = () => {
+type ExperienceProps = {
+  ref: React.RefObject<SectionRefs>;
+};
+
+export const Experience = ({ ref }: ExperienceProps) => {
   const [selectedTab, setSelectedTab] = useState(data[0]?.id);
 
   const info = useMemo(() => {
@@ -49,7 +54,7 @@ export const Experience = () => {
   };
 
   return (
-    <Section>
+    <Section ref={(el) => { ref.current["experience"] = el as HTMLDivElement; }}>
       <SectionHeader count={2}>Where I’ve Worked</SectionHeader>
       <GridWrapper>
         <TabList>
