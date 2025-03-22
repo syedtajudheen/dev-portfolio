@@ -7,9 +7,9 @@ type ContactProps = {
 
 export const Contact = ({ ref }: ContactProps) => {
   return (
-    <Section  ref={(el) => { ref.current["contact"] = el as HTMLDivElement; }}>
-    <Header>What’s Next?</Header>
-    <Title>Get In Touch</Title>
+    <Section ref={(el) => { ref.current["contact"] = el as HTMLDivElement; }}>
+      <Header>What’s Next?</Header>
+      <Title>Get In Touch</Title>
       <p>I’m open to new opportunities, especially ambitious projects. Feel free to reach out—I’ll do my best to respond!</p>
       <a href="mailto:syedtajudheen@live.com"><Button>Say Hello</Button></a>
 
@@ -28,7 +28,7 @@ const Section = styled.section`
   gap: 16px;
 
   @media(max-width: 768px) {
-    padding: 0 24px 100px 24px;
+    padding: 0 24px 0px 24px;
   }
   @media (min-width: 1080px) {
     padding: 80px 100px;

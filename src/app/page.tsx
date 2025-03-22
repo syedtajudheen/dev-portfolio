@@ -45,7 +45,7 @@ export default function Home() {
   };
 
   return (
-    <div className="grid grid-rows-[100px_1fr_20px] min-h-screen gap-16">
+    <div className="grid grid-rows-[100px_1fr_80px] min-h-screen gap-16">
       <GlobalStyle open={open} />
       <Header onClickMenu={handleMenuClick} />
       <SideWidget orientation="left" />
