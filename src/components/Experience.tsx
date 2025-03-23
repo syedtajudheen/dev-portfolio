@@ -59,7 +59,7 @@ export const Experience = ({ ref }: ExperienceProps) => {
       <GridWrapper>
         <TabList>
           {data.map(({ id, title }) => (
-            <Button key={id} isActive={selectedTab === id} onClick={() => handleTabClick(id)}>
+            <Button key={id} $isActive={selectedTab === id} onClick={() => handleTabClick(id)}>
               {title}
             </Button>
           ))}
@@ -146,7 +146,7 @@ const TabList = styled.div`
   align-items: flex-start;
 `;
 
-const Button = styled.button<{ isActive: boolean }>`
+const Button = styled.button<{ $isActive: boolean }>`
   text-decoration: none;
   text-decoration-skip-ink: auto;
   position: relative;
@@ -157,9 +157,9 @@ const Button = styled.button<{ isActive: boolean }>`
   width: 100%;
   height: 42px;
   padding: 0px 20px 2px;
-  border-left: 2px solid ${({ isActive }) => isActive ? "var(--green)" : "var(--lightest-navy)"};
+  border-left: 2px solid ${({ $isActive }) => $isActive ? "var(--green)" : "var(--lightest-navy)"};
   background-color: transparent;
-  color: ${({ isActive }) => isActive ? "var(--green)" : "var(--slate)"};
+  color: ${({ $isActive }) => $isActive ? "var(--green)" : "var(--slate)"};
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
   text-align: left;

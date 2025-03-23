@@ -7,12 +7,12 @@ type SectionHeaderProps = {
 
 export const SectionHeader = ({ count, children }: SectionHeaderProps) => {
   return (
-    <Header count={count} >{children}</Header>
+    <Header $count={count} >{children}</Header>
   );
 }
 
 
-const Header = styled.h2<{ count: number }>`
+const Header = styled.h2<{ $count: number }>`
   font-weight: 600;
   font-family: var(--font-sans);
   margin-bottom: 16px;
@@ -24,7 +24,7 @@ const Header = styled.h2<{ count: number }>`
   &::before {
     position: relative;
     bottom: 4px;
-    content: ${({ count }) => `"0${count}."`};
+    content: ${({ $count }) => `"0${$count}."`};
     margin-right: 10px;
     color: var(--green);
     font-family: var(--font-mono);

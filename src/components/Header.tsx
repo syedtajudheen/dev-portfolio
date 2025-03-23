@@ -47,6 +47,7 @@ const NavMenu = styled.nav`
 `;
 
 const DrawerMenu = styled.div`
+  cursor: pointer;
   @media(min-width: 768px) {
     display: none;
   }
@@ -58,17 +59,13 @@ const MenuList = styled.ol`
   color: inherit;
   counter-reset: item;
   list-style: none;
-  /* display: none; */
+
   /* Apply counter to list items */
   & li::before {
     counter-increment: item;
     content: "0"counter(item) ". "; /* Adds dynamic numbering */
     font-weight: bold;
     color: var(--green);
-  }
-
-  @media screen {
-    
   }
 `;
 
