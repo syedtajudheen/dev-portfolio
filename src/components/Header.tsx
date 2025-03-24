@@ -41,7 +41,7 @@ const HeaderWrapper = styled.header`
   padding: 0 40px;
 
   @media(max-width: 768px) {
-    padding-right: 20px;
+    padding: 0 20px;
   }
 `;
 
