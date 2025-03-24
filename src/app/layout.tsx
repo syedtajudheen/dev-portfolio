@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Syed Tajudheen",
-  description: "Syed Tajudheen",
+  title: "Syed Tajudheen | Frontend Developer | React Expert",
+  description: "Frontend Developer specializing in React, Next.js, and React Native. Passionate about building high-performance, scalable web applications with Micro Frontends, UI/UX design, and modern web technologies.",
 };
 
 export default function RootLayout({

@@ -1,5 +1,6 @@
 import { BiMenuAltRight } from "react-icons/bi";
 import styled from "styled-components";
+import Image from 'next/image';
 
 type HeaderProps = {
   onClickMenu: (section: string) => void;
@@ -11,6 +12,7 @@ export const Header = ({ onClickMenu }: HeaderProps) => {
   };
   return (
     <HeaderWrapper>
+      <Image src="/logo.svg" width={40} height={40} alt="Header logo" />
       <NavMenu>
         <MenuList className="flex flex-row gap-4">
           <Menu onClick={() => onClickMenu("about")}>About</Menu>
@@ -32,11 +34,15 @@ const HeaderWrapper = styled.header`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   font-size: var(--fz-xs);
   font-family: var(--font-mono);
-  padding: 0 12px;
+  padding: 0 40px;
+
+  @media(max-width: 768px) {
+    padding-right: 20px;
+  }
 `;
 
 const NavMenu = styled.nav`
@@ -59,7 +65,6 @@ const MenuList = styled.ol`
   color: inherit;
   counter-reset: item;
   list-style: none;
-
   /* Apply counter to list items */
   & li::before {
     counter-increment: item;
@@ -79,7 +84,7 @@ const Menu = styled.li`
 
 const Button = styled.button`
   padding: 0.5rem;
-  margin: 0 24px;
+  margin-left: 24px;
   border: 1px solid var(--green);
   border-radius: var(--border-radius);
   padding: 8px 16px;

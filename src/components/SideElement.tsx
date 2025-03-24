@@ -33,7 +33,7 @@ const SideElement = styled.div<SideWidgetProps>`
   ${({ orientation }) => `
     position: fixed;
     ${orientation}: 0;
-    ${orientation}: 40px;
+    ${orientation}: 20px;
     bottom: 0px;
     width: 50px;
     background-color: transparent;
