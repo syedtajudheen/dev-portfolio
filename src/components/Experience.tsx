@@ -6,6 +6,22 @@ import { SectionRefs } from "@/app/page";
 const data = [
   {
     id: 0,
+    title: "Northern Trust",
+    fullTitle: "Northern Trust",
+    description: "Worked as a Senior Frontend Engineer",
+    role: "UI Developer (Contract)",
+    duration: "Apr 2025 – Present",
+    desccriptionPoints: [
+      "Developing and maintaining the internal microfrontend framework used across multiple enterprise applications.",
+      "Built and enhanced the UXP-GEN CLI tool to scaffold pre-configured React applications with standardized architecture.",
+      "Implemented monorepo-based shared packages and tooling to streamline development and enforce best practices across teams.",
+      "Enabled faster application bootstrapping by automating configuration for routing, store initialization, and plugin-based extensibility.",
+      "Collaborated with multiple internal teams to support migration from legacy applications to the new microfrontend framework."
+    ],
+    url: "https://www.northerntrust.com/"
+  },
+  {
+    id: 1,
     title: "Standard Chartered",
     fullTitle: "Standard Chartered Bank",
     role: "Development Lead",
@@ -21,7 +37,7 @@ const data = [
     url: "https://www.sc.com/en/"
   },
   {
-    id: 1,
+    id: 2,
     title: "Adappt",
     fullTitle: "Adappt Mobile Cloud Applications Pvt Ltd",
     description: "Worked as a Software Engineer",
