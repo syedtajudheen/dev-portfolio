@@ -12,7 +12,7 @@ const projects = [
     skills: ["React", "Redux", "Micro-frontend", "Styled-components", "Node.js"]
   },
   {
-    title: "Nothern Trust (UXP-GEN)",
+    title: "Northern Trust (UXP-GEN)",
     description: "UXP-GEN is a monorepo platform that provides a CLI tool to scaffold pre-configured React applications and support migration from legacy versions. It includes shared scaffolding packages and an internal microfrontend framework, enabling internal teams to rapidly bootstrap applications with standardized architecture, reducing manual setup and improving development consistency across projects.",
     link: "https://www.northerntrust.com/",
     isFeatured: true,
